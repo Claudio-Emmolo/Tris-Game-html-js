@@ -1,0 +1,130 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Vortax', sans-serif;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.disable-click {
+    pointer-events: none;
+}
+
+/* --- */
+
+main {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    background: rgb(173, 255, 47);
+    background: radial-gradient(circle, rgba(173, 255, 47, 1) 0%, rgba(47, 179, 255, 1) 100%);
+}
+
+div#container {
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    text-shadow: 1px 1px 25px #2fb3ff;
+}
+
+div#game {
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+
+div#game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+div#win-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+    display: flex;
+}
+
+h2 {
+    font-size: 4rem;
+    margin: auto;
+}
+
+div.box {
+    border: 2px solid rgb(0, 0, 0);
+    width: calc(100%/3);
+    height: calc(100%/3);
+    cursor: pointer;
+}
+
+/* PLAYERs */
+.x-player {
+    background-color: #adff2f;
+}
+
+.o-player {
+    background-color: #2fb3ff;
+}
+
+.x-player::after {
+    content: 'X';
+}
+
+
+.o-player::after {
+    content: 'O';
+
+}
+
+.x-player,
+.o-player {
+    display: flex;
+    font-family: 'Death Squire', sans-serif;
+
+}
+
+.x-player::after,
+.o-player::after {
+    font-size: 6rem;
+    margin: auto;
+}
+
+/* Results Color */
+.x-color {
+    color: #adff2f;
+}
+
+.o-color {
+    color: #2fb3ff;
+}
+
+
+/* CREDITS */
+p {
+    font-size: 1.2rem;
+    margin-top: .2rem;
+    text-align: end;
+}
+
+a {
+    text-decoration: none;
+    color: #006eff;
+    transition: all .3s;
+}
+
+a:hover {
+    opacity: .5;
+}
